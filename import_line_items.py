@@ -12,7 +12,6 @@ conn = psycopg2.connect(
     host = os.getenv("DB_HOST"),
     port = os.getenv("DB_PORT")
 )
-conn.set_client_encoding('UTF8')
 
 cursor = conn.cursor()
 
