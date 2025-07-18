@@ -15,7 +15,7 @@ conn = psycopg2.connect(
 
 cursor = conn.cursor()
 
-with open ("receipts.json", "r") as f:
+with open ("receipts.json", "r", encoding="utf-8") as f:
     receipts = json.load(f)
 
 insert_total_taxes_query = """

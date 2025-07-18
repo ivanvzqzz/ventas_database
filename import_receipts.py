@@ -16,7 +16,7 @@ conn = psycopg2.connect(
 
 cursor = conn.cursor()
 
-with open ("receipts.json", "r") as f:
+with open ("receipts.json", "r", encoding="utf-8") as f:
     receipts = json.load(f)
 
 insert_receipt_query = """
@@ -35,7 +35,7 @@ VALUES (
 ON CONFLICT (receipt_number) DO NOTHING;
 """
 def parse_date(value):
-    return datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.000Z') if value else None
+    return datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.000Z") if value else None
 
 inserted_count = 0
 

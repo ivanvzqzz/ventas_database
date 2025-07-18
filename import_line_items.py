@@ -12,10 +12,11 @@ conn = psycopg2.connect(
     host = os.getenv("DB_HOST"),
     port = os.getenv("DB_PORT")
 )
+conn.set_client_encoding('UTF8')
 
 cursor = conn.cursor()
 
-with open ("receipts.json", "r") as f:
+with open ("receipts.json", "r", encoding="utf-8") as f:
     receipts = json.load(f)
 
 insert_line_items_query = """
