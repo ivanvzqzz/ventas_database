@@ -46,7 +46,7 @@ for receipt in receipts:
         receipt.get("note"),
         receipt.get("receipt_type"),
         receipt.get("refund_for"),
-        json.dumps(receipt.get("order")) if receipt.get("order") else None,
+        receipt.get("order"),
         parse_date(receipt.get("created_at")),
         parse_date(receipt.get("updated_at")),
         receipt.get("source"),
