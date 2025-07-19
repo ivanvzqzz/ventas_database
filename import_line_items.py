@@ -60,9 +60,9 @@ conn.commit()
 if inserted_count == 0:
     print("No new records available")
 elif inserted_count == 1:
-    print("✅ Updated sales database, added 1 record to line_items table.")
+    print("Updated sales database, added 1 record to line_items table.")
 else:
-    print(f"✅ Updated sales database, added {inserted_count} records to line_items table.")
+    print(f"Updated sales database, added {inserted_count} records to line_items table.")
 
 cursor.close()
 conn.close()
