@@ -5,6 +5,6 @@ CREATE TABLE total_discounts (
     type TEXT,
     name TEXT,
     percentage NUMERIC,
-    money_amount NUMERIC
+    money_amount NUMERIC,
     UNIQUE (receipt_number, id)
 );
